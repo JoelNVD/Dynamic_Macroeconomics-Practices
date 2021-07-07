@@ -1,0 +1,80 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem} %Para comnfigurar la numeración de en enumerate
+
+
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} EP-3072} \\
+	\textbf{Fecha:} 07/07/2021 \& 2021-I \hspace{0.04cm}}
+\lhead{\scriptsize{\textbf{Profesor:} Joel Vicencio-Damian}  \\
+	\textbf{Curso:} Macroeconomía Dinámica}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{document}
+% PRESENTACIóN--------------------------------------------------------------------------------	
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$1}}}
+		
+		\small{Semana 1}
+		
+		\textsc{Ecuaciones Diferenciales}
+		
+		Ecuaciones Diferenciales I
+		
+	\end{center}
+	
+% EJERCICIOS---------------------------------------------------------------------------------
+	\begin{enumerate}
+		\item Resolver las siguientes ecuaciones diferenciales ordinarias
+		\begin{multicols}{2}
+				\begin{enumerate}[a)]
+					\item $\frac{dy}{dt}=15$
+					\item $\frac{dy}{dt}+5y=0$
+					\item $\frac{dy}{dt}-6y=18$
+					\item $\frac{dy}{dt}+4ty=6t$
+					\item $2\frac{dy}{dt}-2t^2y=9t^2 \quad y(0)=-2.5$
+					\item $\frac{dy}{dt}-2ty=e^{t^2}$
+					\item $(t+5)dy-(y+9)dt=0$
+					\item $y^2(t^3+1)dy+t^2(y^3-5)dt=0$
+					\item $y_{(t)}''-5y_{(t)}'+4y_{(t)}=2$
+					\item $y_{(t)}''+3y_{(t)}'=12$
+					\item $y_{(t)}''=16$
+					\item $y''+3y'-10y=7te^{t};\quad y_{(0)}=-\frac{35}{36};\quad y_{(0)}'=- \frac{5}{39}$
+					\item $2ty''-y'+\frac{1}{y'}=0\quad (t\neq 0)$
+					\item $2yy''=1+(y')^2$
+				\end{enumerate}
+			\end{multicols}
+		\item Resolver las siguientes ecuaciones diferenciales de primer orden, describiendo el procedimiento y simular los resultados en Rstudio o Pyhton
+				\begin{enumerate}[2.1]
+					\item EDO de primero orden
+						\begin{enumerate}[a)]
+							\item $\frac{dy}{dt}+4y=-20\enskip; \quad y(0)=10$
+							\item $\frac{dy}{dt}=3y\enskip; \quad y(0)=2$
+							\item $\frac{dy}{dt}+3y=6t\enskip; \quad y(0)=\frac{1}{2}$
+						\end{enumerate}
+					\item EDO de segundo orden
+						\begin{enumerate}[a)]
+							\item $y''(t)+y'(t)+\frac{1}{4}y(t)=9 \enskip;\quad y(0)=30\enskip$ y $\enskip y'(0)=15$
+							\item $y''(t)-4y'(t)-5y(t)=35\enskip;\quad y(0)=5\enskip$ y $\enskip y'(0)=6$
+							\item $y''(t)-\frac{1}{2}y'(t)=13\enskip;\quad y(0)=17\enskip$ y $\enskip y'(0)=-19$
+							\item $y''(t)+2y'(t)+10y(0)=80;\quad y(0)=10\quad$ y $\quad y'(0)=13$
+						\end{enumerate}
+				\end{enumerate}
+		\item \textbf{Aplicación: Demanda de Dinero}\\
+		 Suponga que la demanda de dinero es solo para fines de transacción.Así, $$M_d = kP(t)Q$$ donde $k$ es constante, $P$ es el nivel de precios y $Q$ es el PBI rea. Asumiendo $M_o=M_d$ y exógenamente determinada por la autoridad monetaria. Si la inflación o el cambio en el ratio de precios es proporcional al excceso de demanda por bienes en una sociedad y siguiendo la \textit{Ley de Walras}, un exceso de demanda por bienes es lo mismo que un exceso de oferta de dinero, por lo tanto $$\frac{dP(t)}{dt}=b(M_o-M_d)$$ encontrar las condiciones de estabilidad, cuando el PBI real $Q$ es constante.
+	\end{enumerate}
+\end{document}
