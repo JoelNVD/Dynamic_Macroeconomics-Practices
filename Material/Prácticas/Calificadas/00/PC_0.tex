@@ -1,0 +1,71 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\decimalpoint
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{color}
+
+
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} EP-3072} \\
+	\textbf{Fecha:} 13/01/2021 \& 2020-II}
+\lhead{\scriptsize{\textbf{Profesor:} Joel Vicencio-Damian}  \\
+	\textbf{Curso:} Macroeconomía Dinámica}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+
+\begin{document}
+	
+	\begin{center}
+		{\Large {\textbf{Práctica Calificada N$^{\circ}$0}}}
+		
+			\small{Semana 1}
+		
+				\textsc{Matemática para Economistas I \& II}
+		
+					OPCIONAL
+	\end{center}
+
+	\begin{enumerate}
+		\item Tomando en consideración la siguiente matriz.
+					\begin{equation}
+						x = \begin{pmatrix}
+								2 & 5 & 0\\
+								7 & 3 & 8\\
+								3 & 0 & 1
+							\end{pmatrix}\notag
+					\end{equation}
+			  Responda lo siguiente:
+					\begin{enumerate}
+						\item Encuentre $X'X$ y $(X'X)^{-1}$
+						\item Computar $M$ y $N$; siendo $M = X(X'X)^{-1}X'$ y $N = I - M$
+						\item Computar $MN$
+						\item Encuentre el rango de $M$ y $N$
+						\item Encuentre la adjunta de $(X'X)^{-1}$
+					\end{enumerate}
+		\item Considere el problema de maximizar $f(x_1; x_2) = x_{1}^{2}x_2$ sujeto a la restricción $h(x_1; x_2) \equiv 2x_{1}^{2}+ x_{2}^{2} - 3 = 0$. Se pide lo siguiente:
+					\begin{enumerate}
+						\item Encuentre la condición de primer orden.
+						\item Use las condiciones de segundo orden para decidir si estos puntos son máximos o
+						mínimos locales.
+					\end{enumerate}
+		\item Optimizar $$\int\limits_{t_0}^{t_1} e^{0.12t}(5\dot{x}^{2}-18x)dt$$
+			  sujeto a $$x(t_o) = x_0 \qquad x(t_1) = x_1$$
+			  
+		\item Dada la ecuciónn $$Maximizar \int\limits_{0}^{2}(6x-4y^2)dt$$
+			  	\begin{center}
+					sujeto a \hspace{0.65cm} $\dot{x} = 16y$\\
+						  	 \hspace{1.5cm}  $x(0) = 24$\\
+							 \hspace{1.72cm} $x(2) = 408$
+			  	\end{center}
+	\end{enumerate}
+\end{document}
