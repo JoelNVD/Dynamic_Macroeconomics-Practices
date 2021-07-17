@@ -1,0 +1,72 @@
+\documentclass[11pt,a4paper]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem} %Para comnfigurar la numeración de en enumerate
+
+
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} EP-3072} \\
+				  					 \textbf{Fecha:} 21/07/2021 \& 2021-I \hspace{0.03cm}}
+\lhead{\scriptsize{\textbf{Profesor:} Joel Vicencio-Damian}  \\
+				   \textbf{Curso:} Macroeconomía Dinámica-Prácticas}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{document}
+% PRESENTACIóN--------------------------------------------------------------------------------	
+\begin{center}
+	{\Large {\textbf{Practica Dirigida N$^{\circ}$3}}}
+	
+	\small{Semana 3}
+	
+	\textsc{Cálculo de Variaciones I}
+	
+	Condición de Euler o Condición de primer orden
+	
+\end{center}
+
+% EJERCICIOS---------------------------------------------------------------------------------
+	\begin{enumerate}
+		\item Resolver los siguientes problemas de Cálculo de Variaciones
+			\begin{enumerate}[a)]
+				\item $V(y)=\int\limits_{0}^{1}(24yt+2\dot{y}^2-4t)dt,\hspace{0.5cm} y(0)=1 \hspace{0.5cm} y(1)=3$
+				\item $V(y)=\int\limits_{0}^{40}(-\frac{\dot{y}^2}{2})dt,\hspace{0.5cm} y(0)=20 \hspace{0.5cm} y(40)=0$
+				\item $V(y)=\int\limits_{0}^{10}(-2y\dot{y}+\dot{y}^2)dt,\hspace{0.5cm} y(0)=10 \hspace{0.5cm} y(10)=100$
+				\item $V(y)=\int\limits_{0}^{2}(12ty+\dot{y}^2)dt,\hspace{0.5cm} y(0)=1 \hspace{0.5cm} y(2)=17$
+				\item $V(y)=\int\limits_{0}^{1}(2-3y\dot{y}^2)dt,\hspace{0.5cm} y(0)=0 \hspace{0.5cm} y(1)=1$
+			\end{enumerate}
+		
+		\item \textbf{Aplicación: Extracción óptima de recursos naturales}\
+
+			Supongamos que una firma es propietaria de una cantidad $``A"$ de un recurso agotable, tal como petróleo, carbón o cobre. La función de beneficios de la firma es logarítmica, de tal forma que por extraer $``q"$ unidades del recurso obtiene beneficios iguales a $``Ln(q)"$. El objetivo de la firma es determinar el patrón de extracción de los recursos, de tal manera que maximice el valor presente de los beneficios. En este problema se asume que la tasa de descuento es constante e igual a $``p"$, y que el recurso se agota en su totalidad en el período $``T"$.
+
+		\item \textbf{Aplicación: Política anti-inflacionaria óptima}\
+
+			El problema que debería resolver la sociedad (o el planificador social) si desea disminuir a cero las expectativas de inflación en un plazo de $``T"$ años, sería el siguiente:
+				\begin{align*}
+					\textup{Max}\quad V[\pi]&=-\int\limits_{0}^{T}\left[\left( \frac{\pi'}{\beta j}\right)^2 + \alpha\left(\pi+\frac{\pi'}{j}\right) ^2\right]dt\\
+					\textup{Sujeto a}\quad \pi (0)&=\pi_0\\
+					\pi (T)&=0
+				\end{align*}
+
+		\item \textbf{Aplicación: Minimización de costos}\
+
+			Sea el costo de producción $C_1(q)=aq^2$ y el costo por concepto de almacenamiento $C_2(y(t))=by(t)$ donde $a,b>0$. El objetivo de la firma es determianr la evolución de la producción e inventario que determine el menor costo total, y el periodo de producción ``T"\ óptimo. Planteé y resuelva el problema de optimización.
+	\end{enumerate}
+\end{document}
