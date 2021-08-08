@@ -1,0 +1,121 @@
+\documentclass[11pt,a4paper]{article}
+
+
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[spanish]{babel}
+
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{color}
+\usepackage{multicol}
+\usepackage[shortlabels]{enumitem} %Para comnfigurar la numeración de en enumerate
+
+
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} EP-3072} \\
+	\textbf{Fecha:} 11/08/2021 \& 2021-I \hspace{0.03cm}}
+\lhead{\scriptsize{\textbf{Profesor:} Joel Vicencio-Damian}  \\
+	\textbf{Curso:} Macroeconomía Dinámica-Prácticas}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+\begin{document}
+%PRESENTACIóN--------------------------------------------------------------------------------	
+	\begin{center}
+		{\Large {\textbf{Practica Dirigida N$^{\circ}$4}}}
+		
+		\small{Semana 6}
+		
+		\textsc{Cálculo de Variaciones II}
+		
+		Condición de Transversalidad \& Diagrama de Fases
+		
+	\end{center}
+	
+%EJERCICIOS---------------------------------------------------------------------------------
+	\begin{enumerate}
+		\item Condiciones de Transversalidad
+				\begin{enumerate}
+					\item [1a)] $V(y)=\int\limits_{0}^{2}(t^2+\dot{y}^2)dt,\, \textup{con}\enskip y(0)=4,\, y(2)=y_t\enskip (y_t\, es\, libre)$
+					\item [1b)] $V(y)=\int\limits_{0}^{T}(t+\dot{y}^2)dt,\, \textup{con}\enskip y(0)=4,\, y(T)=5\enskip \textup{y}\enskip T\, es\, libre$
+					\item [1c)] $V(y)=\int\limits_{0}^{T}(t\dot{y}+\dot{y}^2)dt,\, \textup{con}\enskip y(0)=1,\, y(T)=10\enskip \textup{y}\enskip T\, es\, libre$
+					\item [1d)] $V(y)=-\int\limits_{0}^{T}(1+\dot{y}^2)^{0.5}dt,\, \textup{con}\enskip y(0)=1,\, y(T)=2-3T$
+					\item [1e)] $V(y)=\int\limits_{0}^{T}(1+\dot{y}^2)^{0.5}dt,\, \textup{con}\enskip y(0)=1,\, y(T)=2-T$
+				\end{enumerate}
+		\item Diagrama de Fases
+				\begin{enumerate}[2a)]
+					\item Obtengan, matemáticamente, el diagrama de fases de la siguiente expresión
+						\begin{align*}
+							\dot{x} & = -x + 2y \\
+							\dot{y} & = -3y
+						\end{align*}
+					\item Se define el siguiente sistema de ecuaciones diferenciales lineales
+						\begin{align*}
+							\dot{y} & = ay+bx+h\\
+							\dot{x} & = cy+dx+k
+						\end{align*}
+					  Dibujar el diagrama de fases según las siguientes condiciones:
+						\begin{align*}
+							& a>0,\enskip b<0,\enskip c>0,\enskip d>0 & a>0,\enskip b<0,\enskip c<0,\enskip d<0\\
+							& a<0,\enskip b>0,\enskip c>0,\enskip d<0 & a=0,\enskip b<0,\enskip c>0,\enskip d=0
+						\end{align*}
+					\item Realice el diagrama de fases de los siguientes sistemas de sistemas de ecuaciones diferenciale.
+						\begin{enumerate}[2c1)]
+							\item $\dot{y}=-3y+y^2+2$
+							\item $\dot{x}=3x-18 	 \hspace{1.1cm} \dot{y}=-2y+16$
+							\item $\dot{x}=y-x^{2}+3 \qquad \dot{y}=y-x+1$
+							\item $\dot{x}=y-x^{3} 	 \hspace{1.3cm} \dot{y}=1-xy$
+						\end{enumerate}
+				\end{enumerate}
+			\item \textbf{Aplicaciones económicas}
+				\begin{enumerate}[3a)]
+					\item \textbf{Modelo IS-LM}\\
+							$$\dot{y}=a[E(Y-T,r)+G-Y]=f(Y,r)$$
+							$$\dot{r}=b\left[L(Y,r)-\frac{M}{P}\right]=g(Y,r)$$
+						Donde $Y$ es el nivel de producción, $r$ es la tasa de interés, $E$ es igual a la suma de los gastos en consumo e inversión, $G$ es el gasto público, $T$ son los pagos por impuestos y $P$ el nivel de precios. Las constantes $a$ y $b$ son positivas y representan la velocidad de ajuste del mercado de bienes y del mercado de dinero, respectivamente.\
+					
+						Se asume $G,\enskip T,\enskip M$ y $P$ como fijos, además las funciones de gastos $E$ y la demanda por dinero cumplen las siguientes propiedades.
+							$$0<E_y<1, \quad E_r<0, \quad L_y>0, \quad L_r<0$$
+						Dibujar el diagrama de fases para este modelo y establecer los casos extremos.
+					\item \textbf{Interacción Demanda-Oferta}\\
+						Supongamos que la demanda para un bien depende de su precio $p$ y la oferta de su precio esperado $p^e$. Las cantidades demandadas y ofertadas son
+							$D(p)$ y $O(p^e)$ donde $D$ y $O$ son funciones tal que $D'(p)<0$ y $O'(p^e)>0$.
+						Supongamos que el precio $p$ reacciona al desequilibrio del mercado, con su tasa de cambio proporcional a su desequilibrio. Esto es
+							$$\dot{p}=\alpha [D(p)-O(p^e)], \quad \alpha>0 \enskip \textup{constant}$$
+						Asumimos que el precio esperado tiene una tasa de cambio proporcional a su adaptación en el mercado.
+							$$\dot{p^e}=\beta (p-p^e), \quad \beta>0 \enskip \textup{constante}$$
+					\item \textbf{Explotación óptima de peces}\\
+						Suponga que una población de ``$N(t)$"peces en cierto lago, crece a la siguiente tasa:$$\dot{N}(t)=aN(t)-bN^2(t)$$
+						En ausencia de actividad de extracción. En una comunidad cercana al lago se consume una cantidad ``$C(t)$" de pescado, que brinda una utilidad igual ``$U(c)$" ($U'(c)>0, \enskip U''(c)<0$) y altera el crecimiento de la biomasa de la siguiente forma:$$\dot{N}(t)=aN(t)-bN^2(t)-C(t)\qquad (a,b>0)$$
+						El objetivo de la comunidad es maximizar las utilidades futuras descontadas con la tasa $\rho$: 	$$\dot{V}(c)=\int\limits_{0}^{\infty}e^{-\rho t}U(c)dt$$
+						Considerando la población actuaal de pesces $N_0=\frac{a}{b}$, se le pide resolver el siguiente problema de cálculo de variaciones mediante el diagrama de fases.
+				\end{enumerate}
+			\item Problema integrador\\
+					\textbf{Aplicación:\textit{ Modelo de crecimiento de Ramsey-Cass-Koopmans}}
+						\begin{align*}
+							\textup{Max}\qquad V[y]&=\int\limits_{0}^{\infty}U(c)e^{-\rho t}dt\\
+							\textup{Sujeto a}\qquad c&=Ak-\dot{k}-\delta k \\
+							k(0)&=10 \\
+							A-\delta&>0	 \\
+							A-\delta-\rho&<0
+						\end{align*}
+					Donde $U(c)=\ln c$ y la función de producción $f(k)=Ak$\
+					
+					Resuelva el problema incluyendo:
+						\begin{enumerate}[4a)]
+							\item Condiciones Necesarias
+							\item Condiciones de Transversalidad
+							\item Condiciones Suficientes
+							\item Diagrama de Fases
+						\end{enumerate}
+	\end{enumerate}
+\end{document}
