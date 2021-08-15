@@ -7,3 +7,4 @@ El contenido del respositorio está compuesta por las prácticas calificadas, di
 #### Semana 4 | Feriado
 ### 1. Práctica Calificada 01 | Semana 05 (04/08/2021)
 #### 2.1 Práctica Dirigida 04   | Semana 06 (11/08/2021) → Cálculo de Variaciones II
+#### 2. Práctica Calificada 02 | Semana 7 (18/08/2021)
