@@ -1,0 +1,195 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fancyhdr}
+\usepackage{parskip}
+\usepackage{color}
+
+
+\textwidth=450pt \textheight=620pt \oddsidemargin=0in
+\topmargin=-10pt
+\pagestyle{fancy} \rhead{\scriptsize{\textbf{Código del Curso:} EP-3072} \\
+	\textbf{Fecha:} 08/09/2021 \& 2020-II}
+\lhead{\scriptsize{\textbf{Profesor:} Joel Vicencio-Damian}  \\
+	\textbf{Curso:} Macroeconomía Dinámica-Prácticas}
+\newcommand{\re}[1]{\smallskip\textsf{\textbf{Respuesta}} \begin{sf}\\ #1 \end{sf} \bigskip}
+\newcommand{\ay}[1]{ \scriptsize{\textsl{Hint: #1}}\normalsize{}}
+\newcommand{\pr}[2]{\frac{\partial #1}{\partial #2}}
+
+\decimalpoint
+
+\begin{document}
+	% PRESENTACIÓN--------------------------------------------------------------------------------	
+	\begin{center}
+		{\Large {\textbf{Práctica Dirigida N$^{\circ}$5 y N$^{\circ}$6}}}
+		
+		\small{Semana 09 y 10}
+		
+		\textsc{Control Óptimo I y II}
+		
+	\end{center}
+	
+	% EJERCICIOS---------------------------------------------------------------------------------
+	\begin{enumerate}
+		\item Utilice la condición necesaria (primer orden) y suficientes (segundo orden) 
+		para resolver el siguiente problema de control óptimo.
+		\begin{gather*}
+			\textup{Maximizar}\quad \int\limits_{0}^{1}(5y+3\mu-2\mu^2)dt\\
+			\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=6\mu \\
+				&	y(0)=7 \\
+				&	y(1)=70
+			\end{array}
+		\end{gather*}
+		\item Utilice la condición necesaria (primer orden) y suficientes (segundo orden) 
+		para resolver el siguiente problema de control óptimo.
+		\begin{gather*}
+			\textup{Maximizar}\quad \int\limits_{0}^{5}(-8y-\mu ^2)dt\\
+			\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=0.2\mu \\
+				&	y(0)=3 \\
+				&	y(5)=5.6
+			\end{array}
+		\end{gather*}
+		\item Utilice la condición necesaria (primer orden) y suficientes (segundo orden) 
+		para resolver el siguiente problema de control óptimo.
+		\begin{gather*}
+			\textup{Maximizar}\quad V=\int\limits_{0}^{1}-\mu ^2dt\\
+			\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=y+\mu \\
+				&	y(0)=1 \\
+				&	y(1)=0
+			\end{array}
+		\end{gather*}
+		\item Resuelva el siguiente problema ¿se cumple la restricción de desigualdad?.
+		\begin{gather*}
+			\textup{Maximizar}\quad \int\limits_{0}^{1}(5y+3\mu-2\mu^2)dt\\
+			\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=6\mu \\
+				&	y(0)=7 \\
+				&	y(1)\geq 70
+			\end{array}
+		\end{gather*}
+		\item Resuelva el siguiente problema ¿se cumple la restricción de desigualdad?.
+		\begin{gather*}
+			\textup{Maximizar}\quad \int\limits_{0}^{4}(8y-10\mu^2)dt\\
+			\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=24\mu \\
+				&	y(0)=7 \\
+				&	y(4)\geq 2000
+			\end{array}
+		\end{gather*}
+		\item \textbf{Aplicación: Un modelo económico con dos sectores}\\
+		Se considera una economía que se compone de dos sectores. el sector número 1 produce bienes de inversión, mientras que el sector número 2 produce bienes de consumo. Sea $x_i(t)$ la producción en el sector número $i$, por unidad de tiempo, para $i = 1, 2$; sea $u(t)$ la proporción de inversión asignada al sector número l. Se supone que el incremento en producción por unidad de tiempo en cada sector es proporcional a la inversión asignada al sector (sea $a>0$, la constante de proporcionalidad, análoga en ambos sectores). Se trata de maximiar el consumo total en un período dado de planificación $[0, T]$, conociendo los valores de $x_1(0) =x_{1}^{0}$, $x_2(0) =x_{2}^{0}$. Planteé el problema.
+		\item \textbf{Aplicación: Costos de inversión}\\
+		Una empresa produce apartir de capital y trabajo. El precio de la producción es $p$ y del salario es $w$. La tasa de cambio del capital es igual a la inversión menos el capital corriente multiplicada por la tasa de depreciación, $\delta$. El precio de los bienes de capital es $q$. Es costoso para la empresa ajustar su capital social (porque, por ejemplo, la empresa podría tener que cerrar temporalmente para instalar nuevos equipos). El costo de ajuste viene dado por $c(i(t), k(t))$. Es tal que $c(0, k)=0$ e $i\frac{dc}{di}\geq 0$. Si la empresa busca maximizar beneficios, planteé el problema de la empresa.
+		\item \textbf{Aplicación: Crecimiento óptimo}\\
+		Considere una economía de un solo sector. El único insumo para la producción es el capital. La producción se puede utilizar para consumo o inversión. Sea $f$ y $u$ crecientes, dos veces diferenciables y cóncavas (tienen segundas derivadas negativas). Si el planificador quiere maximizar el consumo en cada instante del tiempo de una dinastía, planteé el problema considerando la depreciación y el factor de descuento.\\
+		Nota: $\delta$ es la tasa de descuento, $\phi$ es la tasa de depreciación.
+		\item \textbf{Aplicación: Producción lineal y ahorro}\\
+		Considere una economía que tiene una función de producción lineal, $y = k$. El modelo comienza en el tiempo $0$ y dura hasta el tiempo $T$. En cada instante, la producción se puede ahorrar para producir capital o consumirse. No hay depreciación ni descuento. El objetivo es maximizar el consumo. Sea $s(t)$ la proporción de producción ahorrado en el tiempo $t$. Asuma $k(T)=0$.Planteé el problema del planificador central si este busca maximizar el consumo. 
+		\item \textbf{Aplicación: Inventario}\\
+		Una planta de leche tiene un pedido de $ y_T $ unidades de queso que se entregarán en 
+		el momento $ T $ al precio $ p $. Actualmente, la empresa tiene $ y_0 = 0 $ unidades disponibles. 
+		Producir a una tasa de $ x (t) $ le cuesta a la empresa $ cx (t) ^ 2 $. El almacenamiento de queso requiere 
+		refrigeración, por lo que es costoso. Almacenar $ y (t) $ unidades cuesta $ sy (t) $. La planta de leche elige su 
+		programa de producción para maximizar las ganancias. Sea $y$ la producción y $x$ el insumo de producción. Planteé el problema a resolver.
+		
+				\item Halle la trayectorias $y^*(t)$, $u^*(t)$, $\lambda ^*(t)$ y analice las condiciones de suficiente (condiciones de segundo orden)
+		\begin{enumerate}
+			\item	\begin{align*}
+				&\textup{Maximizar}\quad V = \int\limits_{0}^{T}\frac{u^{1-\theta}}{1-\theta}dt\\
+				&\begin{array}{lllll}
+					\textup{Sujeto a:}	&	\dot{y}=-y-u \\
+					&	y(0)=2 \\
+					&   y(1)=1 \\
+					&   \theta \enskip \in \enskip ]0,1[ 
+				\end{array}
+			\end{align*}
+			\item 
+			\begin{align*}
+				&\textup{Minimizar}\quad J = \int\limits_{0}^{T}(t^2+u^2)dt\\
+				&\begin{array}{lllll}
+					\textup{Sujeto a:}	&	\dot{y}=u \\
+					&	y(0)=4 \\
+					&   y(T)=5,\enskip T \enskip libre
+				\end{array}
+			\end{align*}
+			\item 
+			\begin{align*}
+				&\textup{Maximizar}\quad V = -\int\limits_{0}^{T}(1+u^2)^{0.5}dt\\
+				&\begin{array}{lllll}
+					\textup{Sujeto a:}	&	\dot{y}=u \\
+					&	y(0)=1 \\
+					&   y(T)= 2- 3T
+				\end{array}
+			\end{align*}
+		\end{enumerate}	
+		\item El problema que debe resolver el agente, para determinar las trayectorias óptimas
+		del consumo (variable de control) y el ahorro (variable de estado), es el
+		siguiente:
+		\begin{align*}
+			&\textup{Maximizar}\quad \int\limits_{0}^{T}Ln(C)e^{-\rho t}dt\\
+			&\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{S}=w+rS-C \\
+				&	S(0)=0 \\
+				&	S(T)=0
+			\end{array}
+		\end{align*}
+		Halle la trayectorias $S^*(t)$, $C^*(t)$, $\lambda ^*(t)$ y analice las condiciones de suficiente (condiciones de segundo orden)
+		\item \textbf{Aplicación: Explotación Minera}\\
+		Un yacimiento minero estará en operaciones por un período de 10 años, período en el cual el precio promedio del mineral estará alrededor de $p=US\$ 46$ por TM.  El costo de extracción, está dado por: $C=\frac{u^2}{y}$. Donde:\
+		
+		$u$ (Variable de control): Es la cantidad de mineral que se extraído en cada período $t$.\\
+		$y$ (Variable de estado). Es el stock de mineral que hay en la mina al final del periodo $t$.\\
+		$y(0) = M$ ($M$ millones de m$^3$). Es la cantidad de mineral que existe en la mina.\\
+		$r$ Es la tasa de descuento. El factor de descuento será: $e^{-rt}$.\
+		
+		Nota: No considere la solución no homegenea de $\lambda$
+		\item \textbf{Aplicación: minimización de costos de dosificación de medicamentos}\\
+		La enfermedad de la Gota se caracteriza por un exceso de ácido úrico en la sangre. Este exceso puede reducirse hasta un nivel aceptable mediante el suministro de una medicación adecuada. Si medimos el exceso de ácido úrico mediante la variable de estado $``x"$, y mediante $``u"$ el suministro de medicamento; la prevalencia de la enfermedad varía según la ecuación: $$\dot{x}=-x+1-u$$
+		
+		Sin medicamentos, $u=0$, la variable de estado de la enfermedad (prevalencia) se mantiene en equilibrio en un nivel $x=1$, que es demasiado alto. Si la medicación se suministra de forma continua y no en dosis discretas, los medicamentos reducir el nivel de la enfermedad hasta cero. Podemos suponer que el estado inicial es el equilibrio 1, por tanto $x(0)=1$, y que en en tiempo $T$ el estado es el aceptable en el cual $x(T)=0$.\
+		
+		Se puede reducir la presencia de ácido úrico utilizando una gran cantidad de medicamentos óptima. La sobre dosis de medicamento tiene efectos secundarios adversos, pero también el medicamento es caro. La función de costos que equilibra estos dos componentes es: $$V=\int\limits_{0}^{T}\frac{1}{2}(k^2+u^2)dt$$
+		
+		El primer componente crece con el tiempo final y el segundo con la cantidad de medicamento utilizado. La constante $k$ mide la importancia relativa de las dos componentes. Encuentre la trayectoria óptima $x^\ast(t)$, el control óptimo $u^\ast(t)$ y el tiempo $T$ necesario para reducir el ácido úrico hasta el  nivel  adecuado.
+		\item Un propietario puede alquilar $ y (t) $ unidades de vivienda al precio $ 
+		p (t) $. El propietario puede ajustar su vivienda a una tarifa $ x (t) $ por 
+		el costo $ s (t) x (t) + c (t) x (t) ^ 2 $, donde $ s (t) $ representa el 
+		precio de compra o vender una vivienda y $ c (t) x (t) ^ 2 $ es un costo de 
+		ajuste destinado a captar la idea de que puede ser cada vez más costoso 
+		comprar o vender una gran cantidad a la vez. El arrendador tiene un horizonte 
+		de tiempo finito y sin descuento. El problema de maximización de beneficios 
+		del propietario es
+		\begin{align*}
+			&\textup{Maximizar}\quad \int\limits_{0}^{T}\left[ p(t)y(t)-s(t)x(t)-c(t)x(t)^2\right]dt\\
+			&\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=x(t) \\
+				&	y(0)=y_O
+			\end{array}
+		\end{align*}
+		\item Encuentre la trayectoria óptima de $y^\ast(t)$, $u^\ast(t)$ y $\lambda^\ast(t)$ de:
+		\begin{align*}
+			&\textup{Maximizar}\quad V[y]=\int\limits_{1}^{4}3ydt\\
+			&\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=y+u \\
+				&	y(0)=5 \\
+				&	u(t) \in [0,2]
+			\end{array}
+		\end{align*}
+		\item Encuentre la trayectoria óptima de $y^\ast(t)$, $u^\ast(t)$ y $\lambda^\ast(t)$ de:
+		\begin{align*}
+			&\textup{Maximizar}\quad V[y]=\int\limits_{1}^{5}(uy-u^2-y^2)dt\\
+			&\begin{array}{lllll}
+				\textup{Sujeto a:}	&	\dot{y}=y+u \\
+				&	y(1)=2
+			\end{array}
+		\end{align*}
+	\end{enumerate}
+\end{document}
